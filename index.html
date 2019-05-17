@@ -17,9 +17,8 @@
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <ul class="user-navigation">
-          <li class="login-link">Вход</li>
-        </ul>
+        <!-- прогрессивная ссылка -->
+        <a class="login-link" href="login.html">Вход </a>
       </nav>
     </header>
     <main class="container">
@@ -87,7 +86,7 @@
       <section class="appointment">
         <h2>Записаться</h2>
         <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        
+
         <form class="appointment-form" action="https://echo.htmlacademy.ru" method="POST">
           <p>
             <label for="meet-date">ДАТА</label>
@@ -141,13 +140,30 @@
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <form class="user-ligin" action="https://echo.htmlacademy.ru" method="post">
+        <label class="enter-user-name">
+          <span class="visually-hidden">ЛОГИН</span>
+          <input type="text" name="user-name" placeholder="ЛОГИН">
+        </label>
+        <label class="enter-user-password">
+          <span class="visually-hidden">ПАРОЛЬ</span>
+          <input type="password" name="user-password" placeholder="ПАРОЛЬ">
+        </label>
+        <label class="remember">
+          <input type="checkbox" name="remember" checked>
+          ЗАПОМНИТЕ МЕНЯ
+        </label>
+        <a href="#" class="forgot-pass">Я ЗАБЫЛ ПАРОЛЬ!</a>
+        <button class="button" type="submit">ВОЙТИ</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button">Закрыть</button>
+      <img src="img/map-big.jpg" width="780" height="574"
+          alt="Офис компании по адресу Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8">
     </section>
   </body>
 </html>
